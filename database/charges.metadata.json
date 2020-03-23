@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"test.charges"},{"v":2,"unique":true,"key":{"chargeId":1},"name":"chargeId_1","ns":"test.charges","background":true}]}

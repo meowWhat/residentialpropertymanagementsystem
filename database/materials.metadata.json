@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"test.materials"},{"v":2,"unique":true,"key":{"materialId":1},"name":"materialId_1","ns":"test.materials","background":true},{"v":2,"unique":true,"key":{"materialName":1},"name":"materialName_1","ns":"test.materials","background":true}]}

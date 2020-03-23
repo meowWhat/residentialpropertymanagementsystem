@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.6">
+  <title>register</title>
+  <!-- Bootstrap core CSS -->
+  <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../../public/css/register.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="../../public/img/page2_name.gif" alt="物业管理系统" width="100%" height="100%">
+      <h2 style="color: coral;">欢迎注册</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-7" id="registTop">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="nickName">昵称 <span class="text-muted">(必填的)</span></label>
+            <input type="text" class="form-control" id="nickName" placeholder="张三" name="name" data-index="1">
+            <div class="invalid-feedback">
+              昵称必须填写
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="userName">账号 <span class="text-muted">(必填的)</span></label>
+          <input type="text" class="form-control" id="userName" placeholder="admin" name="text" data-index="1">
+          <div class="invalid-feedback">
+            账号被要求为6-10位
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password">密码 <span class="text-muted">(必填的)</span></label>
+          <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password" data-index="1">
+          <div class="invalid-feedback">
+            密码被要求6-10位
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password2">确认密码 <span class="text-muted">(必填的)</span></label>
+          <input type="password" class="form-control" id="password2" placeholder="确认密码" name="rePassword"
+            data-index="1">
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="regist">注册</button>
+        <a class="btn btn-primary btn-lg btn-block" type="button" href="/">返回首页</a>
+      </div>
+    </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy;2019-2020 cjh</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">合作</a></li>
+        <li class="list-inline-item"><a href="#">关于我们</a></li>
+        <li class="list-inline-item"><a href="#">帮助</a></li>
+      </ul>
+    </footer>
+    <div class="modal" tabindex="-1" role="dialog" id="warn">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">提示</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="inner">账号或昵称重复，请重新输入</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../public/js/register.js"></script>
+</body>
+
+</html>

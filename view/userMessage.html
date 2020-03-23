@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.6">
+  <title><%= username %>的个人信息</title>
+  <!-- Bootstrap core CSS -->
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/public/css/userMessage.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/public/img/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h2><%= username %>：欢迎您填写业主信息 </h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">您的账单</span>
+          <span class="badge badge-secondary badge-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Product name</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Second product</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Third item</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Promo code</h6>
+              <small>EXAMPLECODE</small>
+            </div>
+            <span class="text-success">-$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">请输入您的姓名</h4>
+        <form class="needs-validation" novalidate action="/owner/regist" method="POST">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name">姓名</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+              <div class="invalid-feedback">
+                姓名必须填写
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="age">年龄</label>
+              <input type="text" class="form-control" id="age" name="age" required>
+              <div class="invalid-feedback">
+                年龄必须填写
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <h4 class="mb-3">性别</h4>
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="credit" name="sex" type="radio" value="-1" class="custom-control-input" checked required>
+                  <label class="custom-control-label" for="credit">男</label>
+                </div>
+                <div class="custom-control custom-radio" style="position: absolute; right: 100px;
+                top: 46px;">
+                  <input id="debit" name="sex" type="radio" value="-2" class="custom-control-input" required>
+                  <label class="custom-control-label" for="debit">女</label>
+                </div>
+              </div>
+              <div class="invalid-feedback">
+                性别必须填写
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="room">房间号</label>
+              <input type="text" class="form-control" id="room" name="room" required>
+              <div class="invalid-feedback">
+                房间号必须填写
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="build">楼栋名</label>
+              <input type="text" class="form-control" id="build" name="build" required>
+              <div class="invalid-feedback">
+                楼栋名必须填写
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="phone">联系电话</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">#</span>
+              </div>
+              <input type="text" class="form-control" id="phone" name="phone" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                电话必须填写
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="role">用户账号</label>
+            <input type="text" class="form-control" id="role" name="role" required>
+            <div class="invalid-feedback">
+              请输入正确的用户账号
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="iden">身份证</label>
+            <input type="text" class="form-control" id="iden" name="iden" required>
+            <div class="invalid-feedback">
+              请输入正确的身份证
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="native">业主籍贯</label>
+            <input type="text" class="form-control" id="native" name="native" required>
+            <div class="invalid-feedback">
+              籍贯必须填写
+            </div>
+          </div>
+          <div class="row">
+
+          </div>
+          <hr class="mb-4">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="same-address" checked>
+            <label class="custom-control-label" for="same-address">同意用户协议</label>
+          </div>
+          <hr class="mb-4">
+
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit" id="userMessage_submit">提交</button>
+        </form>
+      </div>
+    </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2019-2020 @cjh</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="/user" target="_blank">首页</a></li>
+        <li class="list-inline-item"><a href="/learnMore" target="_blank">关于我们</a></li>
+        <li class="list-inline-item"><a href="/learnMore" target="_blank">支持</a></li>
+      </ul>
+    </footer>
+  </div>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/js/userMessage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+/* latin */
+@font-face {
+  font-family: 'Cabin Sketch';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Cabin Sketch Bold'), local('CabinSketch-Bold'), url(https://fonts.gstatic.com/s/cabinsketch/v13/QGY2z_kZZAGCONcK2A4bGOj0I_1Y5tjz.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.text-effect {
+  color: #ffff00;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  position: relative;
+}
+
+.text-effect span {
+  display: inline-block;
+  animation: animate 0.5s linear infinite both;
+}
+
+.text-effect span:nth-child(1),
+.text-effect span:nth-child(4),
+.text-effect span:nth-child(7),
+.text-effect span:nth-child(10) {
+  color: #4cd137;
+}
+
+.text-effect span:nth-child(2),
+.text-effect span:nth-child(5),
+.text-effect span:nth-child(8) {
+  color: #ff0000;
+}
+
+@keyframes animate {
+
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(4deg) scale(0.98);
+  }
+
+  75% {
+    transform: rotate(-4deg) scale(1.02);
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .text-effect {
+    font-size: 100px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .text-effect {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .text-effect {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .text-effect {
+    font-size: 45px;
+  }
+}
